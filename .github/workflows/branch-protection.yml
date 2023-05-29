@@ -10,5 +10,3 @@ jobs:
     steps:
       - name: Display event payload
         run: echo "${{ toJson(github.event) }}"
-        
-        ----
