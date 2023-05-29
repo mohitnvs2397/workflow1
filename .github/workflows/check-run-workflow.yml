@@ -1,0 +1,12 @@
+name: Check Run Workflow
+
+on:
+  check_run:
+    types: [rerequested, completed]
+
+jobs:
+  process_check_run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Process Check Run
+        run: echo "Processing check run..."
