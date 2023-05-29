@@ -1,0 +1,12 @@
+name: Scheduled Workflow
+
+on:
+  schedule:
+  - cron: '22 17 * * *'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display event payload
+        run: echo "${{ toJson(github.event) }}"
