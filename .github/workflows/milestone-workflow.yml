@@ -1,0 +1,12 @@
+name: Milestone Workflow
+
+on:
+  milestone:
+    types: [opened, closed, deleted]
+
+jobs:
+  process_milestone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Process Milestone
+        run: echo "A milestone has been opened or deleted"
