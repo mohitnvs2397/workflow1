@@ -1,0 +1,11 @@
+name: Create Event Workflow
+
+on:
+  create
+
+jobs:
+  process_create_event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Process Create Event
+        run: echo "Processing create event..."
