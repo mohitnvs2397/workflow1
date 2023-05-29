@@ -1,0 +1,12 @@
+name: Branch Protection Rule
+
+on:
+  branch_protection_rule:
+    types: [created, deleted]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display event payload
+        run: echo "${{ toJson(github.event) }}"
