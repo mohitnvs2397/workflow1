@@ -1,0 +1,12 @@
+name: Issue Comment Workflow
+
+on:
+  issue_comment:
+    types: [created, deleted]
+
+jobs:
+  process_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Process Comment
+        run: echo "An issue comment was created or deleted"
